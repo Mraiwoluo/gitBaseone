@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="com_font_larger_size">26sp</dimen>
+    <dimen name="com_font_large_size">26sp</dimen>
+    <dimen name="com_font_middle_size">26sp</dimen>
+    <dimen name="com_font_small_size">26sp</dimen>
+
+    <dimen name="widget_width">387dp</dimen>
+    <dimen name="widget_height">480dp</dimen>
+
+    <dimen name="widget_marginLeft">140dp</dimen>
+
+    <dimen name="widget_time_text_size">70sp</dimen>
+    <dimen name="widget_date_text_size">28sp</dimen>
+    <dimen name="widget_temp_text_size">50sp</dimen>
+
+    <dimen name="bar_temp_text_size">34sp</dimen>
+    <dimen name="bar_date_text_size">18sp</dimen>
+</resources>

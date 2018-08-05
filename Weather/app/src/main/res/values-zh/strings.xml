@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">天气</string>
+    <string name="city_manager">城市管理</string>
+    <string name="search_city">搜索城市</string>
+    <string name="loading_weather">正在更新...</string>
+    <string name="toast_add_fail">添加城市失败！</string>
+    <string name="upadte_success">更新成功!</string>
+    <string name="upadte_fail">更新失败!</string>
+    <string name="loading_city_tips">正在努力加载...</string>
+    <string name="none_city_tips">加载异常，请检查网络状态，无城市天气信息！</string>
+    <string name="city_mix_count">最多添加6个城市</string>
+    <string name="city_state">当前网络异常</string>
+    <string name="city_data">目前天气接口没有台湾地区数据</string>
+
+    <string-array name="hot_citys">
+        <item name="beijing">北京</item>
+        <item name="shanghai">上海</item>
+        <item name="guangzhou">广州</item>
+        <item name="shenzhen">深圳</item>
+        <item name="chongqing">重庆</item>
+        <item name="chengdu">成都</item>
+        <item name="wuhan">武汉</item>
+        <item name="nanjing">南京</item>
+        <item name="suzhou">苏州</item>
+        <item name="hangzhou">杭州</item>
+        <item name="sanya">三亚</item>
+        <item name="xiamen">厦门</item>
+        <item name="tianjin">天津</item>
+        <item name="shenyang">沈阳</item>
+        <item name="zhengzhou">郑州</item>
+        <item name="jinan">济南</item>
+        <item name="lanzhou">兰州</item>
+        <item name="xian">西安</item>
+        <item name="guiyang">贵阳</item>
+        <item name="nanning">南宁</item>
+        <item name="fuzhou">福州</item>
+        <item name="nanchang">南昌</item>
+        <item name="hefei">合肥</item>
+        <item name="changsha">长沙</item>
+        <item name="hongkong">香港</item>
+        <item name="macau">澳门</item>
+
+    </string-array>
+
+    <array name="week">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </array>
+
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+    <string name="sunday">周日</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+
+    <string name="hotcity">热门城市</string>
+     <string name="line">  |  </string>
+    <string name="defult_weather">深圳 | 晴转多云</string>
+    <string name="widget_time">08:00</string>
+    <string name="widget_year">2010/01/01</string>
+    <string name="widget_temp">22℃</string>
+
+</resources>

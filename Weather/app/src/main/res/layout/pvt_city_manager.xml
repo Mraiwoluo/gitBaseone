@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_layout"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/pvt_city_adder_add" />
+
+        <RelativeLayout
+            android:id="@+id/layout_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/add"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_city_adder_back" />
+
+            <TextView
+                android:id="@+id/textview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/back"
+                android:text="@string/city_manager"
+                android:textColor="@drawable/selector_citymanager_textview"
+                android:textSize="@dimen/com_font_larger_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/citys"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="13.7dp"
+        android:numColumns="4"
+        android:paddingLeft="76.5dp"
+        android:paddingRight="76.5dp"
+        android:paddingTop="40dp"
+        android:scrollbars="horizontal"
+        android:verticalSpacing="13.7dp" />
+</RelativeLayout>

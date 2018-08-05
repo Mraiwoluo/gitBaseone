@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_time"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/widget_marginLeft"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/time"
+            android:textSize="@dimen/widget_time_text_size"
+            android:text="@string/widget_time"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFFFF"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:textSize="@dimen/widget_date_text_size"
+            android:layout_below="@id/time"
+            android:text="@string/widget_year"
+            android:gravity="center"
+            android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/widget_content_color"/>
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/temp_layout"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/layout_time"
+        android:layout_alignBottom="@id/layout_time"
+        android:layout_marginRight="@dimen/widget_marginLeft"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/temp"
+            android:textSize="@dimen/widget_temp_text_size"
+            android:text="@string/widget_temp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFFFF"/>
+
+        <TextView
+            android:id="@+id/weather"
+            android:textSize="@dimen/widget_date_text_size"
+            android:layout_alignParentBottom="true"
+            android:text="@string/defult_weather"
+            android:gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/widget_content_color"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/img_weather"
+        android:layout_centerVertical="true"
+        android:layout_width="168dp"
+        android:layout_height="168dp"
+        android:layout_toLeftOf="@id/temp_layout"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/weather_wind" />
+
+
+
+</RelativeLayout>

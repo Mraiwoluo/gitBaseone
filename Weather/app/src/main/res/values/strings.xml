@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+    <string name="city_manager">City manager</string>
+    <string name="search_city">Search city</string>
+    <string name="loading_weather">Loading Weather...</string>
+    <string name="toast_add_fail">Add City Fail!</string>
+    <string name="upadte_success">UpDate Success!</string>
+    <string name="upadte_fail">UpDate Fail!</string>
+    <string name="loading_city_tips">Loading...</string>
+    <string name="none_city_tips">Loading fail,No City Info!</string>
+    <string name="city_mix_count">Add City Is No More Then 6 </string>
+    <string name="city_state">The current network anomalies</string>
+    <string name="city_data">No weather interface data in Taiwan</string>
+
+    <string-array name="hot_citys">
+        <item name="beijing">Beijing</item>
+        <item name="shanghai">Shanghai</item>
+        <item name="guangzhou">Guangzhou</item>
+        <item name="shenzhen">Shenzhen</item>
+        <item name="chongqing">Chongqing</item>
+        <item name="chengdu">Chengdu</item>
+        <item name="wuhan">Wuhan</item>
+        <item name="nanjing">Nanjing</item>
+        <item name="suzhou">Suzhou</item>
+        <item name="hangzhou">Hangzhou</item>
+        <item name="sanya">Sanya</item>
+        <item name="xiamen">Xiamen</item>
+        <item name="tianjin">Tianjin</item>
+        <item name="shenyang">Shenyang</item>
+        <item name="zhengzhou">Zhengzhou</item>
+        <item name="jinan">Jinan</item>
+        <item name="lanzhou">Lanzhou</item>
+        <item name="xian">Xian</item>
+        <item name="guiyang">Guiyang</item>
+        <item name="nanning">Nanning</item>
+        <item name="fuzhou">Fuzhou</item>
+        <item name="nanchang">Nanchang</item>
+        <item name="hefei">Hefei</item>
+        <item name="changsha">Changsha</item>
+        <item name="hongkong">Hong Kong</item>
+        <item name="macau">Macau</item>
+
+    </string-array>
+
+    <array name="week">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </array>
+
+
+    <string name="monday">monday</string>
+    <string name="tuesday">tuesday</string>
+    <string name="wednesday">wednesday</string>
+    <string name="thursday">thursday</string>
+    <string name="friday">friday</string>
+    <string name="saturday">saturday</string>
+    <string name="sunday">sunday</string>
+    <string name="month">month</string>
+    <string name="day">day</string>
+
+    <string name="hotcity">hotcity</string>
+    <string name="line">  |  </string>
+    <string name="defult_weather">Shenzhen | Weather</string>
+    <string name="widget_time">08:00</string>
+    <string name="widget_year">2010/01/01</string>
+    <string name="widget_temp">22℃</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/pvt_weather_widget_layout"
+    android:minWidth="@dimen/widget_width"
+    android:minHeight="@dimen/widget_height"
+    android:minResizeWidth="260dp"
+    android:minResizeHeight="36dp"
+    android:previewImage="@mipmap/ic_launcher"
+    android:resizeMode="none"
+    android:widgetCategory="home_screen|keyguard" >
+</appwidget-provider>

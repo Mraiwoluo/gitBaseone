@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/forecast"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:background="@drawable/weather_sun"
+        android:layout_marginTop="30dp"
+        android:layout_width="94dp"
+        android:layout_height="94dp" />
+
+    <TextView
+        android:text="@string/app_name"
+        android:id="@+id/temper_range"
+        android:layout_marginTop="22dp"
+        android:textSize="@dimen/bar_temp_text_size"
+        android:textColor="@color/bar_temper_color"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/app_name"
+        android:id="@+id/date"
+        android:fontFamily="regular"
+        android:layout_margin="18dp"
+        android:layout_gravity="center"
+        android:textSize="@dimen/bar_date_text_size"
+        android:textColor="@color/bar_date_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/app_name"
+        android:id="@+id/wind"
+        android:layout_margin="3dp"
+        android:textSize="@dimen/com_font_small_size"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

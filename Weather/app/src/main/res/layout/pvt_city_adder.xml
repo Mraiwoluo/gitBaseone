@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_layout"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="88.8dp"
+        android:layout_marginRight="88.8dp"
+        android:layout_marginTop="48dp">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/btn_city_adder_back"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/search_edit_bg">
+
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/btn_search"
+                android:padding="20dp" />
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:hint="@string/search_city"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="#a0b0af"
+                android:textSize="@dimen/com_font_large_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head_layout"
+        android:layout_marginLeft="88.8dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/hotcity"
+        android:textColor="@color/white"
+        android:textSize="@dimen/com_font_large_size" />
+
+    <GridView
+        android:id="@+id/citys"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_hot"
+        android:layout_marginLeft="88.8dp"
+        android:layout_marginRight="88.8dp"
+        android:horizontalSpacing="13.7dp"
+        android:numColumns="5"
+        android:paddingTop="25dp"
+        android:scrollbars="horizontal"
+        android:verticalSpacing="13.7dp" />
+
+    <ListView
+        android:id="@+id/listview_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head_layout"
+        android:layout_marginLeft="88.8dp"
+        android:layout_marginRight="88.8dp"
+        android:background="@color/bg_layout"
+        android:divider="#7fffffff"
+        android:dividerHeight="1dp"
+        android:visibility="gone"></ListView>
+
+</RelativeLayout>

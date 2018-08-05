@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pvetec.weather"
+    android:sharedUserId="android.uid.systemui"
+    android:versionCode="1"
+    android:versionName="7.1.0.1ca">
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:name="com.pvetec.weather.WeatherApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/weather"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme.NoTitleBar.CustomBackground">
+        <activity
+            android:name="com.pvetec.weather.view.WeatherView"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.pvetec.weather.view.CityManagerView"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pvetec.weather.view.CityAdderView"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 设置key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="bc84312f12a4d8ebe6ed318293ec3463" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService">
+        </service>
+
+        <service
+            android:name="com.pvetec.weather.WeatherService"
+            android:exported="true" />
+
+        <service android:name="com.pvetec.weather.view.widget.WidgetService"></service>
+
+        <provider
+            android:name="com.pvetec.weather.provider.RemoteProvider"
+            android:authorities="com.zeu.weather"
+            android:exported="true" />
+
+        <receiver android:name="com.pvetec.weather.receiver.NetworkConnectChangedReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!--开启启动-->
+        <receiver android:name="com.pvetec.weather.receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.pvetec.weather.view.widget.WeatherWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.pvetec.weather.widget.update.time"></action>
+                <action android:name="com.pvetec.weather.widget.update.weather"></action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/weather_widget" />
+        </receiver>
+
+    </application>
+
+</manifest>

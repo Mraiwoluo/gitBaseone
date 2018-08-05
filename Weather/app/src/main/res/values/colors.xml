@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+
+    <color name="widget_content_color">#a2b3b2</color>
+    <color name="tv_color">#333333</color>
+    <color name="bg_layout">#191c25</color>
+    <color name="bg_item_normal">#282c36</color>
+    <color name="bg_item_pressed">#313541</color>
+    <color name="bar_background_color">#B2142333</color>
+    <color name="bar_temper_color">#FFFFFF</color>
+    <color name="bar_date_color">#FFFFFF</color>
+    <color name="search_listview_color">#191c25</color>
+</resources>

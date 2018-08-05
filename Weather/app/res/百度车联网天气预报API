@@ -1,0 +1,149 @@
+百度车联网API
+1.地址:http://developer.baidu.com/map/carapi-7.htm
+2.接口格式:http://api.map.baidu.com/telematics/v3/weather?location=北京&output=json&ak=yourkey
+    接口参数说明
+        String ak true 开发者密钥
+        String sn false 若用户所用ak的校验方式为sn校验时该参数必须。 （sn生成算法）
+        String location true 输入城市名或经纬度，城市名称如:北京，经纬度格式为lng,lat坐标如: location=116.305145,39.982368;城市天气预报中间"|"分隔,location=116.305145,39.982368| 122.305145,36.982368|….
+        String output false 输出的数据格式，默认为xml格式，当output设置为’json’时，输出的为json格式的数据;
+        String coord_type false 请求参数坐标类型，默认为gcj02经纬度坐标。允许的值为bd09ll、bd09mc、gcj02、wgs84。bd09ll表示百度经纬度坐标，bd09mc表示百度墨卡托坐标，gcj02表示经过国测局加密的坐标。wgs84表示gps获取的坐标。
+    返回结果
+        参数名称 含义 说明
+        currentCity 当前城市 返回城市名
+        status 返回结果状态信息
+        date 当前时间 年-月-日
+        results 天气预报信息 白天可返回近期3天的天气情况（今天、明天、后天）、晚上可返回近期4天的天气情况（今天、明天、后天、大后天）
+        results.currentCity 当前城市
+        results.weather_data weather_data.date 天气预报时间
+        weather_data.dayPictureUrl 白天的天气预报图片url
+        weather_data.nightPictureUrl 晚上的天气预报图片url
+        weather_data.weather 天气状况 所有天气情况（”|”分隔符）：晴|多云|阴|阵雨|雷阵雨|雷阵雨伴有冰雹|雨夹雪|小雨|中雨|大雨|暴雨|大暴雨|特大暴雨|阵雪|小雪|中雪|大雪|暴雪|雾|冻雨|沙尘暴|小雨转中雨|中雨转大雨|大雨转暴雨|暴雨转大暴雨|大暴雨转特大暴雨|小雪转中雪|中雪转大雪|大雪转暴雪|浮尘|扬沙|强沙尘暴|霾
+        weather_data.wind 风力
+        weather_data.temperature 温度
+
+    返回json格式的数据
+        {
+            "error": 0,
+            "status": "success",
+            "date": "2013-07-17",
+            "results": [
+                {
+                    "currentCity": "北京市",
+                    "weather_data": [
+                        {
+                            "date": "周三(今天, 实时：24℃)",
+                            "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                            "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                            "weather": "多云",
+                            "wind": "微风",
+                            "temperature": "23℃~ 15℃"
+                        },
+                        {
+                            "date": "明天（周四）",
+                            "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/leizhenyu.png",
+                            "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/zhongyu.png",
+                            "weather": "雷阵雨转中雨",
+                            "wind": "微风",
+                            "temperature": "29～22℃"
+                        },
+                        {
+                            "date": "后天（周五）",
+                            "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/yin.png",
+                            "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                            "weather": "阴转多云",
+                            "wind": "微风",
+                            "temperature": "31～23℃"
+                        },
+                        {
+                            "date": "大后天（周六）",
+                            "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                            "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                            "weather": "多云",
+                            "wind": "微风",
+                            "temperature": "31～24℃"
+                        }
+                    ]
+                },
+                {
+                    "currentCity": "合肥市",
+                    "weather_data": [
+                        {
+                            "date": "今天（周三）",
+                            "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                            "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                            "weather": "多云",
+                            "wind": "东风3-4级",
+                            "temperature": "27℃"
+                        },
+                        {
+                            "date": "明天（周四）",
+                            "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                            "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                            "weather": "多云",
+                            "wind": "东北风3-4级",
+                            "temperature": "35～27℃"
+                        },
+                        {
+                            "date": "后天（周五）",
+                            "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                            "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                            "weather": "多云",
+                            "wind": "南风",
+                            "temperature": "35～27℃"
+                        },
+                        {
+                            "date": "大后天（周六）",
+                            "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                            "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                            "weather": "多云",
+                            "wind": "东风",
+                            "temperature": "34～27℃"
+                        }
+                    ]
+                }
+            ]
+        }
+3.密钥申请(百度开发者中心,应用的包名,hash1值)
+    申请地址:http://lbsyun.baidu.com/apiconsole/key,
+    申请类型:Android端
+    安全码(mcode):sha1;your_package_name
+        mcode=61:8D:0E:59:80:04:FF:DE:56:AA:5B:C8:18:95:80:A4:5A:31:AA:7D;com.zeu.weather
+    key:F1ENwOdUUiQifr6d9zQIH0Grj0ebAWGW
+
+4.使用
+    String URL = "http://api.map.baidu.com/telematics/v3/weather?location=%s&output=json&ak=F1ENwOdUUiQifr6d9zQIH0Grj0ebAWGW&mcode=61:8D:0E:59:80:04:FF:DE:56:AA:5B:C8:18:95:80:A4:5A:31:AA:7D;com.zeu.weather";
+    StringBuffer result = IPNetUtils.sendGetRequest(String.format(URL, "北京"), "utf-8", 5000, 3000);
+5.Gson的使用
+    1.下载Gson.Jar(地址:https://github.com/google/gson/releases)
+    2.下载bin.zip格式的maven(下载地址:http://maven.apache.org/download.cgi),解压,并将%your_maven_path%/bin/目录添加到环境变量中
+    3.修改maven项目目录下的pom.xml文件中对应的maven版本, mvn -v 查看版本
+    4.cd到maven项目目录下, 执行mvn -DskipTests clean package, 其中-DskipTests，不执行测试用例
+        maven常用指令
+            1. 创建Maven的普通java项目：
+               mvn archetype:create
+               -DgroupId=packageName
+               -DartifactId=projectName
+            2. 创建Maven的Web项目：
+                mvn archetype:create
+                -DgroupId=packageName
+                -DartifactId=webappName
+                -DarchetypeArtifactId=maven-archetype-webapp
+            3. 编译源代码： mvn compile
+            4. 编译测试代码：mvn test-compile
+            5. 运行测试：mvn test
+            6. 产生site：mvn site
+            7. 打包：mvn package
+            8. 在本地Repository中安装jar：mvn install
+            9. 清除产生的项目：mvn clean
+            10. 生成eclipse项目：mvn eclipse:eclipse
+            11. 生成idea项目：mvn idea:idea
+            12. 组合使用goal命令，如只打包不测试：mvn -Dtest package
+            13. 编译测试的内容：mvn test-compile
+            14. 只打jar包: mvn jar:jar
+            15. 只测试而不编译，也不测试编译：mvn test -skipping compile -skipping test-compile
+                  ( -skipping 的灵活运用，当然也可以用于其他组合命令)
+            16. 清除eclipse的一些系统设置:mvn eclipse:clean
+
+        5.下载android studio GsonFormat插件(或者下载Json2Java,JsonView),此处使用android studio GsonFormat插件,并重启android studio
+        6.创建空的java文件,并点击菜单Code->Generate->GsonFormat(或者Alt+s),将Json数据复制到对话框中,点击Format->OK,GsonFormat会自动为你创建数据类型(假设为:Forecast.java),则
+            ForecastBean bean = new Gson().fromJson(result.toString(), new TypeToken<ForecastBean>(){}.getType());将会解析Json数据并填充对应的数据类型中
